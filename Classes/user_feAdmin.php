@@ -917,7 +917,7 @@ class user_feAdmin
             default:
                 if ($this->conf['create']) {
                     $newFieldList = implode(',', array_intersect(explode(',', $this->fieldList), GeneralUtility::trimExplode(',', $this->conf['create.']['fields'], 1)));
-DebugUtility::debug($this->dataArr);
+
                     $this->DBgetInsert($this->theTable, $this->thePid, $this->dataArr, $newFieldList, true);
                     $newId = $GLOBALS['TYPO3_DB']->sql_insert_id();
 
